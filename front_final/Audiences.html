@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Front Final</title>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="misestilos.css">
+<script type="text/javascript" src="js/misFuncionesAudiences.js"></script>
+</head>
+
+<body>
+    <header id="cabeceralogo">
+    <div>
+    <h1>Audiences </h1>
+    </div>
+    </header>
+    <nav id="menuprincipal">
+    <div>
+    <ul>
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="Reportes.html">Reportes</a></li>
+    <li><a href="Categorias.html">Categorias</a></li>
+    <li><a href="Clientes.html">Clientes</a></li>
+    <li><a href="Mensajes.html">Mensajes</a></li>
+    <li><a href="Reservaciones.html">Reservaciones</a></li>
+    <li><a href="Audiences.html">Audiences</a></li>
+    </ul>
+    </div>
+    </nav>
+
+    <label>NAME:</label>
+    <input class="controlAudiences" type="text" id="name2" placeholder="escribe el nombre" ><br>
+    <label>OWNER:</label>
+    <input class="controlAudiences" type="text" id="owner" placeholder="escribe el dueño" ><br>
+    <label>CAPACITY:</label>
+    <input class="controlAudiences" type="number" id="capacity" placeholder="escribe la capacidad"><br>
+    <label>DESCRIPTION:</label>
+    <input class="controlAudiences" type="text" id="description2" placeholder="escribe la descripcion" ><br>
+    <select id="select-category"></select>
+    <script type="text/javascript">
+        window.onload = autoInicioCategoria();
+    </script>
+
+<div id="miListaAudience"></div>
+<button onclick="traerInformacionAudience()" > Consultar Audiences</button>
+
+<button onclick="agregarAudience()">Guardar Audiences</button>
+
+</body>
+</html>

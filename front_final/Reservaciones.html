@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Front Final</title>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="misestilos.css">
+<script type="text/javascript" src="js/misFuncionesReservas.js"></script>  
+</head>
+
+<body>
+    <header id="cabeceralogo">
+    <div>
+    <h1>Reservaciones </h1>
+    </div>
+    </header>
+    <nav id="menuprincipal">
+    <div>
+    <ul>
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="Reportes.html">Reportes</a></li>
+    <li><a href="Categorias.html">Categorias</a></li>
+    <li><a href="Clientes.html">Clientes</a></li>
+    <li><a href="Mensajes.html">Mensajes</a></li>
+    <li><a href="Reservaciones.html">Reservaciones</a></li>
+    <li><a href="Audiences.html">Audiences</a></li>
+    </ul>
+    </div>
+    </nav>
+ 
+<label>STARTDATE: Escoja la Fecha Inicio de la Reservacion</label>
+<input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br>
+<label>DEVOLUTIONDATE: Escoja la Fecha Devolucion de la Reservacion</label>
+<input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br>
+<label>STATUS: Estado de la Reservacion "completed / cancelled</label>
+<input class="controlReservation" type="text" id="status" placeholder="escriba completed o cancelled para el estado de la Reservacion ">
+
+<select id="select-client"></select>
+    <script type="text/javascript">
+        window.onload = autoInicioRelacionCliente();
+    </script>
+        <select id="select-audience"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioAudience();
+        </script>
+ <button onclick=" agregarReservation()">Guardar Reserva</button>
+
+ <div id="miListaReservation"></div>
+</body>
+</html>
